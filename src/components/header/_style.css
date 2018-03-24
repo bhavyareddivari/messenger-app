@@ -1,0 +1,21 @@
+
+.ca-header{
+  height: 30px;
+  background-color: #003366;
+  padding: 20px;
+}
+
+.ca-header__logo-container {
+  color: #ff6600;
+  font-weight: bold;
+  font-family: Montserrat;
+  font-size: 20px;
+}
+
+.ca-header__logo {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 105px;
+}

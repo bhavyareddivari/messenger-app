@@ -8,18 +8,18 @@ import Footer from '../../components/footer/index'
 // styles
 import './_style.css'
 
-class ChatWindow extends Component {
+class HomePage extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="ca-home">
         <Header />
-        <p className="App-intro">
-          Get started
-        </p>
-      <Footer/>
+        <div className="ca-home__container">
+          Welcome
+        </div>
+        <Footer />
       </div>
     );
   }
 }
 
-export default ChatWindow
+export default HomePage

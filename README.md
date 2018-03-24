@@ -54,6 +54,7 @@ Now running npm start and npm run build also builds Sass files.
 ## Folder Structure
 
 Followed this approach to build the folder structure:
+
 https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1
 
 After creation, project looks like this:
@@ -63,6 +64,8 @@ messenger-app/
   README.md
   node_modules/
   package.json
+  public/
+    index.html
   src/
     components/
       ## all global components goes here
@@ -79,4 +82,5 @@ messenger-app/
 
 ## Routes
 Default Route - http://localhost:3000/ - Homepage
+
 chat-window link - http://localhost:3000/chat-online - renders chat windows

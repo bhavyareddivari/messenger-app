@@ -1,14 +1,18 @@
 {
   "name": "messenger-app",
   "version": "0.1.0",
+  "main": "src/index.js",
   "private": true,
   "dependencies": {
+    "node-sass": "^4.8.3",
     "node-sass-chokidar": "^1.2.0",
     "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "sass-loader": "^6.0.7",
+    "webpack": "^3.11.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
@@ -19,5 +23,8 @@
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.1.1"
   }
 }

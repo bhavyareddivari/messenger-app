@@ -1,0 +1,14 @@
+.ca-footer {
+  height: 50px;
+  background-color: #003366;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+.ca-footer__copyright {
+  color: #ff6600;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 20px;
+}
