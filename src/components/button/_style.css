@@ -1,0 +1,49 @@
+/**
+ * Button component base style
+ */
+
+
+.ca-button {
+  height: 30px;
+  cursor: pointer;
+  padding: 0 18px;
+  border: none;
+  border-radius: 2px;
+  background-color: transparent;
+  font-weight: bold;
+}
+ /* psuedo classes */
+.ca-button:disabled {
+  background: #cccccc;
+  color: #cccccc;
+  pointer-events: none;
+  cursor: default;
+}
+
+ /* Elements */
+.ca-button__text {
+  font-size: 13px;
+}
+
+/* Component modifiers */
+.ca-button--primary {
+  background-color: #ff6600;
+  color: #ffffff;
+}
+.ca-button--secondary {
+  background-color: $#78BE20;
+  &:hover {
+    background-color: #6CAB1D;
+  }
+}
+
+/* modifiers */
+.ca-button--width-100pct {
+  width: 100%;
+}
+.ca-button--size-11px {
+  font-size: 11px;
+}
+.ca-button--size-19px {
+  font-size: 19px;
+}

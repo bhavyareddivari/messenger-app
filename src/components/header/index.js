@@ -11,7 +11,7 @@ const Header = () => (
   <div className="ca-header">
     <div className="ca-header__logo-container">
       <header>Chat Live</header>
-      <img className="ca-header__logo" src={logo} />
+      <img alt="logo" className="ca-header__logo" src={logo} />
     </div>
   </div>
 )
