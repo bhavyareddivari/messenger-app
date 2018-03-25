@@ -15,7 +15,7 @@
  /* psuedo classes */
 .ca-button:disabled {
   background: #cccccc;
-  color: #cccccc;
+  color: #a6a6a6;
   pointer-events: none;
   cursor: default;
 }
