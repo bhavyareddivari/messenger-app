@@ -82,5 +82,3 @@ messenger-app/
 
 ## Routes
 Default Route - http://localhost:3000/ - Homepage
-
-chat-window link - http://localhost:3000/chat-online - renders chat windows

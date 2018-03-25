@@ -29,6 +29,7 @@ class HomePage extends Component {
 
   // send username to chat window
   submitUsername = (e) => {
+    // prevent the page from refresh
     e.preventDefault()
     this.setState({
       isSubmitted: true,

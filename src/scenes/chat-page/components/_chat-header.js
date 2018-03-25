@@ -4,7 +4,7 @@ import React from 'react'
 // images
 import profile from '../images/profile.png'
 
-const ChatHeader = () => {
+const ChatHeader = ({username}) => {
   return (
     <div className="ca-chat__header">
       <div>
@@ -13,7 +13,7 @@ const ChatHeader = () => {
           alt="icon"
           src={profile} />
         <div className="ca-chat__name">
-          Bhavya
+          {username}
         </div>
         <div className="ca-chat__back-icon">
           &lt;

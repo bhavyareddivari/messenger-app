@@ -10,7 +10,7 @@ import logo from './chat.png'
 const Header = () => (
   <div className="ca-header">
     <div className="ca-header__logo-container">
-      <header>Chat Live</header>
+      <header>Chat App</header>
       <img alt="logo" className="ca-header__logo" src={logo} />
     </div>
   </div>

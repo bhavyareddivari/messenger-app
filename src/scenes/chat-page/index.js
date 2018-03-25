@@ -9,13 +9,13 @@ import './_style.css'
 
 class ChatPage extends Component {
   render() {
-    const { username } = this.props
+    const myName = "Bhavya"
     return (
       <div className="ca-chat">
         <div className="ca-chat__row">
-          <ChatWindow />
+          <ChatWindow {...this.props}/>
           <div className="ca-chat__separator" />
-          <ChatWindow />
+          <ChatWindow username={myName}/>
         </div>
       </div>
     );
