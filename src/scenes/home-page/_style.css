@@ -15,7 +15,6 @@
   height:30%;
   color: #ffffff;
 }
-
 .ca-home__right-container {
   float: left;
 	width: 100%;
@@ -27,7 +26,6 @@
   display: inline-block;
   margin: 12px;
 }
-
 .ca-home__profile-icon {
   width: 70px;
   height: 70px;
@@ -40,7 +38,6 @@
   top: 20px;
   left: 5%;
 }
-
 .ca-home__welcome-text {
   text-align: center;
   padding: 5px;
@@ -68,11 +65,6 @@
 .ca-home__button-container {
   text-align: center;
 }
-input {
-  padding: 5px;
-  width: 180px;
-}
-
 
 
  /* modifiers */
