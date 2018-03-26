@@ -17,6 +17,24 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
+##server
+using socket.io (npm module) to enable one-on-one communication
+
+using the sample server api available online:
+https://github.com/paul-pagnan/simple-chat-api
+
+Start the API by running:
+
+```
+npm install
+
+npm run compile
+
+npm start
+
+```
+Make sure server is be running on http://localhost:4008 to enable socket.io one-one communication
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.<br>
@@ -25,37 +43,15 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 The app is ready to be deployed!
 
-## Adding SASS (CSS Preprocessor)
-
-install the command-line interface for Sass:
-
-### `npm install --save node-sass-chokidar`
-
-To change start and build scripts to include the CSS preprocessor commands:
-
-```
-"scripts": {
-+    "build-css": "node-sass-chokidar src/ -o src/",
-+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
--    "start": "react-scripts start",
--    "build": "react-scripts build",
-+    "start-js": "react-scripts start",
-+    "start": "npm-run-all -p watch-css start-js",
-+    "build-js": "react-scripts build",
-+    "build": "npm-run-all build-css build-js",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
-
-```
-
-Now running npm start and npm run build also builds Sass files.
-
 ## Folder Structure
 
 Followed this approach to build the folder structure:
 
 https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1
+
+Followed the below approach to write CSS classnames with mobile-first approach
+
+https://css-tricks.com/bem-101/
 
 After creation, project looks like this:
 
@@ -84,21 +80,3 @@ messenger-app/
 
 ## Routes
 Default Route - http://localhost:3000/ - Homepage
-
-#server
-using socket.io (npm module) to enable one-on-one communication
-
-using the sample server api available online:
-https://github.com/paul-pagnan/simple-chat-api
-
-Start the API by running:
-
-```
-npm install
-
-npm run compile
-
-npm start
-
-```
-Make sure server is be running on http://localhost:4008 to enable socket.io communication

@@ -20,9 +20,24 @@ class ChatWindow extends Component {
     // Listen for messages from the server
     this.socket.on('server:message', message => {
       message.time = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+      message.isTyping = false
       this.addMessage(message)
     })
   }
+
+  // TODO: send 'typing..' state , facing some issues - need to fix
+  setTypingState= (message, value) => {
+  //   const messageObj = {
+  //     username: this.props.username,
+  //     message
+  //   }
+  //   // Emit the message to the server
+  //   this.socket.on('client:message', messageObj)
+  //   messageObj.isTyping = value
+  //   // add message object to messages list
+  //   this.addMessage(messageObj)
+   }
+
 
   // send message to server is server is up and running
   sendMessage = (message) => {
@@ -34,12 +49,13 @@ class ChatWindow extends Component {
     this.socket.emit('client:message', messageObj)
     messageObj.fromMe = true
     messageObj.time = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+    messageObj.isTyping = false
     // add message object to messages list
     this.addMessage(messageObj)
   }
 
+  // add the message to the state
   addMessage(message) {
-    // add the message to the state
     const { messages } = this.state
     messages.push(message)
     this.setState({ messages })
@@ -56,7 +72,7 @@ class ChatWindow extends Component {
         </div>
         <div className="ca-chat__screen">
           <ChatHeader {...this.props}/>
-          <ChatMessages messages={messages} isTyping={this.state.isTyping}/>
+          <ChatMessages messages={messages}/>
           <ChatFooter onSend={this.sendMessage} isTyping={this.setTypingState}/>
         </div>
     </div>

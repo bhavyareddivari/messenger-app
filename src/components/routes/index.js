@@ -10,9 +10,9 @@ import ChatPage from '../../scenes/chat-page/index'
 const Routes = () => (
   <main>
     <Switch>
-      <Route exact path='/' component={HomePage}/>
+     <Route exact path='/' component={HomePage}/>
      <Route path='/chat-online' component={ChatPage}/>
-      <Route exact path="/" render={() => <Redirect to="/home" />} />
+     <Route exact path="/" render={() => <Redirect to="/home" />} />
     </Switch>
   </main>
 )

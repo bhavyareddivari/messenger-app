@@ -4,6 +4,9 @@ import React, { Component } from 'react'
 // components
 import Button from '../../../components/button/index'
 
+// images
+import smiley from '../images/smiley.png'
+
 class ChatFooter extends Component {
   constructor (props) {
     super(props)
@@ -16,6 +19,7 @@ class ChatFooter extends Component {
     this.setState({
       inputMessage: e.target.value
     })
+    // this.props.isTyping(e.target.value, true)
   }
 
   // handle form submit
@@ -42,6 +46,9 @@ class ChatFooter extends Component {
             value={this.state.inputMessage}
             onChange={this.getMessage}
             required />
+          <img className="ca-chat__smiley"
+            src={smiley}
+            alt="smiley"/>
         </div>
         <div className="ca-chat__send">
           <Button

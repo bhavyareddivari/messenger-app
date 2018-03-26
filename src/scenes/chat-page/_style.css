@@ -1,3 +1,9 @@
+/* Block */
+.ca-chat {
+  padding-bottom: 40px;
+}
+
+/* Elements */
 .ca-chat__row {
   display: table;
   padding: 20px;
@@ -58,6 +64,7 @@
 }
 .ca-chat__message-field {
   display: table-cell;
+  position: relative;
 }
 .ca-chat__send {
   display: table-cell;
@@ -94,14 +101,25 @@
   font-size: 12px;
   float: right;
 }
+.ca-chat__smiley {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  opacity: 0.6;
+  cursor: pointer;
+}
 /* .ca-chat_message-typing {
   font-style: italic;
   font-size: 12px;
-  background: none;
+  background-color: none;
+  padding: 5px;
 }
 .ca-chat__hide-typing {
   display: none;
 } */
+
 
 @media only screen and (min-width: 622px) {
   .ca-chat__row {

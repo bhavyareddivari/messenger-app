@@ -18,7 +18,7 @@ class ChatPage extends Component {
           <ChatWindow username={myName}/>
         </div>
       </div>
-    );
+    )
   }
 }
 

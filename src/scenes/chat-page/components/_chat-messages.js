@@ -26,7 +26,8 @@ class ChatMessages extends Component {
           username={message.username}
           message={message.message}
           fromMe={message.fromMe}
-          time={message.time}/>
+          time={message.time}
+          isTyping={message.isTyping}/>
       )
     })
     return (
