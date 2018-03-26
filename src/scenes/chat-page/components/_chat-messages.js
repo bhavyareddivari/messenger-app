@@ -25,7 +25,8 @@ class ChatMessages extends Component {
           key={uniqueId('message')}
           username={message.username}
           message={message.message}
-          fromMe={message.fromMe} />
+          fromMe={message.fromMe}
+          time={message.time}/>
       )
     })
     return (

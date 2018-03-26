@@ -66,6 +66,8 @@ messenger-app/
   package.json
   public/
     index.html
+  config/
+    ## where server setup goes in
   src/
     components/
       ## all global components goes here
@@ -82,3 +84,21 @@ messenger-app/
 
 ## Routes
 Default Route - http://localhost:3000/ - Homepage
+
+#server
+using socket.io (npm module) to enable one-on-one communication
+
+using the sample server api available online:
+https://github.com/paul-pagnan/simple-chat-api
+
+Start the API by running:
+
+```
+npm install
+
+npm run compile
+
+npm start
+
+```
+Make sure server is be running on http://localhost:4008 to enable socket.io communication

@@ -67,6 +67,8 @@
   bottom: 5px;
 }
 .ca-chat__content {
+  height: 430px;
+  margin-bottom: 40px;
   overflow: scroll;
 }
 .ca-chat__from-me {
@@ -87,6 +89,19 @@
 .ca-chat__message-text{
   color: black;
 }
+.ca-chat__message-time {
+  font-style: italic;
+  font-size: 12px;
+  float: right;
+}
+/* .ca-chat_message-typing {
+  font-style: italic;
+  font-size: 12px;
+  background: none;
+}
+.ca-chat__hide-typing {
+  display: none;
+} */
 
 @media only screen and (min-width: 622px) {
   .ca-chat__row {

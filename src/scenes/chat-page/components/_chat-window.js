@@ -19,6 +19,7 @@ class ChatWindow extends Component {
 
     // Listen for messages from the server
     this.socket.on('server:message', message => {
+      message.time = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
       this.addMessage(message)
     })
   }
@@ -31,9 +32,10 @@ class ChatWindow extends Component {
     }
     // Emit the message to the server
     this.socket.emit('client:message', messageObj)
-
-    messageObj.fromMe = true;
-    this.addMessage(messageObj);
+    messageObj.fromMe = true
+    messageObj.time = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+    // add message object to messages list
+    this.addMessage(messageObj)
   }
 
   addMessage(message) {
@@ -54,8 +56,8 @@ class ChatWindow extends Component {
         </div>
         <div className="ca-chat__screen">
           <ChatHeader {...this.props}/>
-          <ChatMessages messages={messages}/>
-          <ChatFooter onSend={this.sendMessage}/>
+          <ChatMessages messages={messages} isTyping={this.state.isTyping}/>
+          <ChatFooter onSend={this.sendMessage} isTyping={this.setTypingState}/>
         </div>
     </div>
     )
